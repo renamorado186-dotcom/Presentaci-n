@@ -1,0 +1,358 @@
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MAYA ETERNAL | Expedition Épica</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#4e635b",
+                        "on-primary-fixed-variant": "#374b44",
+                        "surface-bright": "#373a38",
+                        "background": "#111413",
+                        "on-tertiary-container": "#5b9673",
+                        "surface-container-lowest": "#0c0f0e",
+                        "tertiary-fixed-dim": "#96d4ad",
+                        "primary-container": "#122620",
+                        "on-tertiary-fixed-variant": "#125134",
+                        "tertiary-fixed": "#b2f1c8",
+                        "surface-dim": "#111413",
+                        "tertiary": "#96d4ad",
+                        "on-surface": "#e1e3e1",
+                        "on-primary": "#20342e",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-tint": "#b5ccc2",
+                        "on-primary-container": "#798e86",
+                        "on-secondary": "#3c2f00",
+                        "secondary-container": "#af8d11",
+                        "on-error": "#690005",
+                        "surface-variant": "#323534",
+                        "on-tertiary-fixed": "#002111",
+                        "on-tertiary": "#003921",
+                        "error": "#ffb4ab",
+                        "on-secondary-container": "#342800",
+                        "surface-container": "#1d201f",
+                        "surface-container-highest": "#323534",
+                        "surface-container-low": "#191c1b",
+                        "primary-fixed": "#d1e8de",
+                        "primary": "#b5ccc2",
+                        "on-surface-variant": "#c2c8c4",
+                        "inverse-on-surface": "#2e3130",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#282b29",
+                        "primary-fixed-dim": "#b5ccc2",
+                        "secondary": "#e9c349",
+                        "secondary-fixed": "#ffe088",
+                        "on-secondary-fixed-variant": "#574500",
+                        "outline-variant": "#424845",
+                        "on-background": "#e1e3e1",
+                        "tertiary-container": "#002916",
+                        "surface": "#111413",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed": "#0b1f19",
+                        "outline": "#8c928f",
+                        "inverse-surface": "#e1e3e1",
+                        "secondary-fixed-dim": "#e9c349"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "container-max": "1200px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Cinzel Decorative"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "display-hero": ["Cinzel Decorative"],
+                        "headline-lg": ["Cinzel Decorative"],
+                        "headline-lg-mobile": ["Cinzel Decorative"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-hero": ["72px", {"lineHeight": "80px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>:root { --cycle-blend: 0; --sky-color: #1a2521; --jade-glow: #96d4ad; --gold-glow: #e9c349; --star-color: rgba(150, 212, 173, 0.4); } body { background-color: var(--surface-dim); color: var(--on-surface); overflow-x: hidden; cursor: none; transition: background-color 10s ease-in-out; } #lighting-overlay { position: fixed; inset: 0; pointer-events: none; z-index: 90; mix-blend-mode: multiply; background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0, calc(var(--cycle-blend) * 0.7)) 100%); transition: background 10s ease-in-out; } .night-mode .bioluminescent { filter: drop-shadow(0 0 12px var(--jade-glow)); color: var(--jade-glow) !important; } .museum-vignette { background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(17, 20, 19, 0.95) 100%); pointer-events: none; } .god-rays { position: absolute; top: -100px; left: 0; width: 100%; height: 200px; background: linear-gradient(110deg, transparent 40%, rgba(233, 195, 73, 0.08) 45%, rgba(233, 195, 73, 0.15) 50%, rgba(233, 195, 73, 0.08) 55%, transparent 60%); background-size: 200% 100%; animation: rays 15s linear infinite; pointer-events: none; mask-image: radial-gradient(circle at top, black 20%, transparent 70%); opacity: calc(1 - var(--cycle-blend)); } @keyframes rays { 0% { background-position: 200% 0%; } 100% { background-position: -200% 0%; } } .codex-scroll { transform-origin: top; transform: scaleY(0); transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1); background: linear-gradient(to bottom, #d1e8de 0%, #b5ccc2 100%); color: #20342e; padding: 2rem; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 8px solid transparent; border-image: url('https://www.transparenttextures.com/patterns/natural-paper.png') 30 stretch; } .nav-open .codex-scroll { transform: scaleY(1); } .codex-handle { cursor: pointer; transition: transform 0.3s ease; } .nav-open .codex-handle { transform: rotate(180deg); } #jade-trail { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1000; } .artifact-card { background: rgba(18, 38, 32, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(233, 195, 73, 0.2); transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); transform-style: preserve-3d; perspective: 1000px; } .artifact-card:hover { border-color: rgba(150, 212, 173, 0.6); box-shadow: 0 0 30px rgba(150, 212, 173, 0.2); } .magnifier-lens { position: absolute; width: 150px; height: 150px; border: 2px solid #e9c349; border-radius: 50%; pointer-events: none; display: none; z-index: 50; box-shadow: 0 0 20px rgba(233, 195, 73, 0.4), inset 0 0 15px rgba(233, 195, 73, 0.2); backdrop-filter: contrast(1.3) brightness(1.2); background-repeat: no-repeat; } @keyframes rotateCalendar { from { transform: rotate(0deg); } to { transform: rotate(360deg); } } .spinning-calendar { animation: rotateCalendar 180s linear infinite; } .glyph-glow { text-shadow: 0 0 15px rgba(150, 212, 173, 0.8), 0 0 30px rgba(150, 212, 173, 0.4); animation: breathe 3s ease-in-out infinite; } @keyframes breathe { 0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 4px rgba(233, 195, 73, 0.5)); } 50% { opacity: 1; filter: drop-shadow(0 0 20px rgba(233, 195, 73, 0.9)); } } .scroll-reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.2, 0, 0.2, 1); } .scroll-reveal.active { opacity: 1; transform: translateY(0); } #rain-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 5; overflow: hidden; } .rain-drop { position: absolute; background-color: rgba(255, 255, 255, 0.1); width: 1px; pointer-events: none; } @keyframes fall { 0% { transform: translateY(-100px); opacity: 0; } 100% { transform: translateY(105vh); opacity: 0.4; } } .deep-mist { position: fixed; bottom: 0; left: 0; width: 100%; height: 40vh; background: linear-gradient(to top, rgba(150, 212, 173, 0.1), transparent); pointer-events: none; z-index: 6; filter: blur(60px); animation: mistFlow 30s ease-in-out infinite alternate; } @keyframes mistFlow { from { transform: translateX(-10%) scaleX(1); } to { transform: translateX(10%) scaleX(1.1); } } .viz-bar { width: 3px; background: var(--gold-glow); transition: height 0.1s ease; } .echo-ripple { position: fixed; border: 2px solid rgba(150, 212, 173, 0.3); border-radius: 50%; pointer-events: none; transform: scale(0); animation: rippleEffect 1s ease-out forwards; z-index: 9999; } @keyframes rippleEffect { to { transform: scale(4); opacity: 0; } } .divine-aura { animation: divinePulse 4s infinite ease-in-out; } @keyframes divinePulse { 0%, 100% { box-shadow: 0 0 20px rgba(233, 195, 73, 0.1), 0 0 40px rgba(150, 212, 173, 0.05); } 50% { box-shadow: 0 0 40px rgba(233, 195, 73, 0.3), 0 0 60px rgba(150, 212, 173, 0.2); } } .mystical-breathing { animation: portraitBreathe 6s infinite ease-in-out; } @keyframes portraitBreathe { 0%, 100% { transform: scale(1); filter: brightness(1); } 50% { transform: scale(1.05); filter: brightness(1.2) contrast(1.1); } } .divine-revelation-overlay { position: absolute; inset: 0; background: radial-gradient(circle, rgba(233, 195, 73, 0.4) 0%, transparent 70%); opacity: 0; transition: opacity 0.5s ease; pointer-events: none; z-index: 20; } .artifact-card:hover .divine-revelation-overlay { opacity: 1; animation: flashLight 0.8s ease-out; } @keyframes flashLight { 0% { opacity: 0; } 20% { opacity: 1; filter: brightness(2); } 100% { opacity: 0.6; } } .local-particle-container { position: absolute; inset: 0; pointer-events: none; z-index: 5; overflow: hidden; } .spark { position: absolute; width: 3px; height: 3px; background: var(--gold-glow); border-radius: 50%; filter: blur(1px); opacity: 0; } @keyframes floatSpark { 0% { transform: translateY(0) scale(0); opacity: 0; } 20% { opacity: 0.8; } 100% { transform: translateY(-100px) translateX(20px) scale(1); opacity: 0; } } .cosmic-depth-bg { background: radial-gradient(circle at 50% 50%, #1a2521 0%, #0c0f0e 100%); position: relative; overflow: hidden; } .starry-overlay { position: absolute; inset: 0; background-image: radial-gradient(1.5px 1.5px at 20px 30px, #fff, rgba(0,0,0,0)), radial-gradient(1.5px 1.5px at 40px 70px, #fff, rgba(0,0,0,0)), radial-gradient(1.5px 1.5px at 50px 160px, #fff, rgba(0,0,0,0)), radial-gradient(1.5px 1.5px at 80px 120px, #fff, rgba(0,0,0,0)), radial-gradient(1.5px 1.5px at 110px 40px, #fff, rgba(0,0,0,0)), radial-gradient(1.5px 1.5px at 150px 80px, #fff, rgba(0,0,0,0)); background-size: 200px 200px; opacity: 0.5; animation: starDrift 100s linear infinite; } @keyframes starDrift { from { background-position: 0 0; } to { background-position: 200px 200px; } } .constellation-lines { position: absolute; inset: 0; pointer-events: none; z-index: 2; opacity: 0.6; stroke: var(--jade-glow); filter: drop-shadow(0 0 10px var(--jade-glow)) drop-shadow(0 0 5px white); } .jade-pulse-hover:hover { animation: jadePulse 1.2s infinite; } @keyframes jadePulse { 0% { box-shadow: 0 0 0 0 rgba(150, 212, 173, 0.6); transform: scale(1); } 50% { box-shadow: 0 0 40px 15px rgba(150, 212, 173, 0.3); transform: scale(1.15); } 100% { box-shadow: 0 0 0 0 rgba(150, 212, 173, 0); transform: scale(1); } } .emerald-celestial-glow { filter: drop-shadow(0 0 45px rgba(150, 212, 173, 0.9)); } .math-symbol { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; } .math-symbol:hover { color: var(--jade-glow); text-shadow: 0 0 30px var(--jade-glow), 0 0 50px white; } .celestial-transition { background: linear-gradient(to bottom, transparent 0%, rgba(26, 37, 33, 0.9) 50%, #0c0f0e 100%); animation: bgPulse 8s infinite alternate; } @keyframes bgPulse { from { opacity: 0.4; } to { opacity: 0.8; } } </style>
+</head>
+<body class="font-body-md selection:bg-secondary selection:text-on-secondary">
+<div id="lighting-overlay"></div>
+<canvas id="jade-trail"></canvas>
+<div id="rain-container"></div>
+<div class="deep-mist"></div>
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-[100]">
+<div class="absolute inset-0 border-b border-secondary/20 bg-surface-dim/90 backdrop-blur-md z-[-1]"></div>
+<div class="god-rays"></div>
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto relative z-10">
+<h1 class="font-headline-md text-headline-md text-secondary drop-shadow-[0_0_8px_rgba(233,195,73,0.5)] bioluminescent">MAYA ETERNAL</h1>
+<div class="flex items-center gap-8">
+<!-- Audio Controller -->
+<div class="flex items-end gap-1 h-6 cursor-pointer group" id="audio-toggle">
+<div class="viz-bar h-2 group-hover:h-4"></div>
+<div class="viz-bar h-4 group-hover:h-6"></div>
+<div class="viz-bar h-3 group-hover:h-5"></div>
+<div class="viz-bar h-5 group-hover:h-3"></div>
+<span class="text-[10px] ml-2 text-secondary font-label-caps uppercase hidden md:block">Atmospheric Audio</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<button class="flex items-center gap-2 text-secondary font-bold font-body-md text-body-md group" id="scroll-trigger">
+                        Explore Codex
+                        <span class="material-symbols-outlined codex-handle">expand_more</span>
+</button>
+</nav>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 font-bold hover:scale-95 transition-all duration-200">Begin Expedition</button>
+</div>
+</div>
+<!-- Ancestral Scroll Component -->
+<div class="codex-scroll absolute left-0 right-0 top-full overflow-hidden" id="nav-scroll">
+<div class="max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="space-y-4">
+<h4 class="font-headline-md text-xl border-b border-primary/30 pb-2">Ancient Sites</h4>
+<a class="block hover:translate-x-2 transition-transform" href="#">Copán Ruins</a>
+<a class="block hover:translate-x-2 transition-transform" href="#">Tikal Plateau</a>
+<a class="block hover:translate-x-2 transition-transform" href="#">Chichén Itzá</a>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline-md text-xl border-b border-primary/30 pb-2">Sacred Knowledge</h4>
+<a class="block hover:translate-x-2 transition-transform" href="#">Celestial Mapping</a>
+<a class="block hover:translate-x-2 transition-transform" href="#">The Zero Concept</a>
+<a class="block hover:translate-x-2 transition-transform" href="#">Glyph Translator</a>
+</div>
+<div class="col-span-2 relative opacity-50">
+<img alt="background" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwcD5xa-rwbu8qzqS9zSceSYL4qwp4Dq56WIg_snNtFdpeIFfrtKZjYbLyKDiJEt37PPQ1OV_Z99KE7wjwa8rB8mmlcAxgYMGyNoDFvD53ETo0miSJj0wVHkB__7kdOWg4CWYmoQED9S1g4dk8F6ZTU9WMpyG9jrS8MCPXSDczYnx1S2QFwenlg7CbWxF7-ANiQTZf-NUj79FPgIMz6b78RqxUnOQDew6nClju1x5P1nYsNqj5DJDR9fINv_byDuy2Md_4IKb_igU"/>
+<p class="italic text-sm relative z-10 p-4">"Time is a wheel, and we are but the dust that rides its edge. Every sunset is a prelude to a rebirth in the underworld."</p>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-primary/20 text-center text-xs tracking-widest uppercase opacity-60">
+                Unrolling the Popol Vuh Archives
+            </div>
+</div>
+</header>
+<main class="relative pt-48 pb-24 overflow-hidden" id="main-content">
+<!-- Parallax Background -->
+<div class="fixed inset-0 z-[-2] opacity-40 parallax-bg" id="parallax-layer">
+<img class="w-full h-[120%] object-cover grayscale brightness-50 scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfw3DWRVBCKuRoOKkLZcNNPjkkQWry4k3dPCuVY8eQcSn8BUOfid95FbI9pjao6su-7t82sfsppqkdmdl8bfKaauVMTPc1kL5UB3nrAvr2S9E9h6_1ohVCvQRNB_RZLigU3Jmc-7QHkMP4OP-B5HUrV8xrfjd8-yuHakXLYEjt5MjeNM7nU6u_OgAbIPWbnXx6E9H14_HQObLpuQL9L9jY9f0MdF-N0BJLGV7jwCEw2t7EhG5zNGcgWmqhSTI7rY3j7Ld5pXUhQc4"/>
+</div>
+<div class="fixed inset-0 z-[-1] museum-vignette"></div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<!-- Hero Header -->
+<div class="text-center mb-24 scroll-reveal">
+<h2 class="font-display-hero text-display-hero text-secondary mb-4 drop-shadow-lg scale-90 md:scale-100 bioluminescent">Cultura y Logros</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Exploring the profound mathematical, linguistic, and spiritual heights of the Maya civilization.</p>
+</div>
+<!-- Main Artifact Grid - Cosmic Observatory Transformation -->
+<div class="relative mb-24 rounded-xl overflow-hidden p-1 bg-[#0c0f0e] border border-secondary/10">
+<!-- Cosmic Atmosphere Layers -->
+<div class="absolute inset-0 starry-overlay"></div>
+<div class="absolute inset-0 celestial-transition opacity-60 animate-pulse"></div>
+<!-- Constellation Overlay SVG -->
+<svg class="constellation-lines" viewbox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<circle cx="200" cy="300" fill="currentColor" r="4"></circle>
+<circle cx="600" cy="400" fill="currentColor" r="4"></circle>
+<circle cx="1000" cy="300" fill="currentColor" r="4"></circle>
+<path d="M200 300 L600 400 L1000 300" fill="none" stroke-width="1"></path>
+<circle cx="400" cy="150" fill="currentColor" r="4"></circle>
+<circle cx="800" cy="650" fill="currentColor" r="4"></circle>
+<path d="M400 150 L600 400 L800 650" fill="none" stroke-width="1"></path>
+</svg>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch relative z-10 p-8">
+<!-- Left: Jeroglíficos (Wrapped in Celestial UI) -->
+<div class="lg:col-span-4 artifact-card p-8 group relative overflow-hidden scroll-reveal tilt-card bg-surface-container-lowest/40 backdrop-blur-xl border-secondary/20">
+<div class="local-particle-container">
+<div class="spark animate-[floatSpark_4s_infinite]" style="left: 20%; top: 80%"></div>
+<div class="spark animate-[floatSpark_6s_infinite_1s]" style="left: 70%; top: 90%"></div>
+</div>
+<h3 class="font-headline-md text-headline-md text-secondary mb-6 bioluminescent">Jeroglíficos</h3>
+<div class="relative cursor-none mb-6 border border-secondary/20 rounded-sm overflow-hidden shadow-2xl" id="magnifier-container">
+<img alt="Maya Glyphs" class="w-full h-64 object-cover" id="glyph-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwcD5xa-rwbu8qzqS9zSceSYL4qwp4Dq56WIg_snNtFdpeIFfrtKZjYbLyKDiJEt37PPQ1OV_Z99KE7wjwa8rB8mmlcAxgYMGyNoDFvD53ETo0miSJj0wVHkB__7kdOWg4CWYmoQED9S1g4dk8F6ZTU9WMpyG9jrS8MCPXSDczYnx1S2QFwenlg7CbWxF7-ANiQTZf-NUj79FPgIMz6b78RqxUnOQDew6nClju1x5P1nYsNqj5DJDR9fINv_byDuy2Md_4IKb_igU"/>
+<div class="magnifier-lens" id="lens"></div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant relative z-10">Escritura Viva: Descifrando la Historia en Piedra. Use the magnifying glass to inspect the chiseled precision.</p>
+</div>
+<!-- Center: Calendar Wheel (Sacred Time with Bioluminescent Glow) -->
+<div class="lg:col-span-4 flex flex-col items-center justify-center text-center p-8 relative scroll-reveal">
+<div class="local-particle-container">
+<div class="spark animate-[floatSpark_3s_infinite]" style="left: 50%; top: 50%"></div>
+<div class="spark animate-[floatSpark_5s_infinite_0.5s]" style="left: 45%; top: 55%"></div>
+</div>
+<div class="relative w-full aspect-square max-w-[400px] mb-8">
+<div class="absolute inset-0 bg-tertiary/20 blur-[100px] rounded-full animate-pulse"></div>
+<img alt="Maya Calendar" class="spinning-calendar w-full h-full object-contain drop-shadow-[0_0_60px_rgba(150,212,173,0.6)] emerald-celestial-glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS_V5XhpTzImzAOlO_EJcmLyW-jetLZGNgXdRP92sDikeFHp1iY2WysxgiczxN_sObQzjde71EkBa5BnoHdQSYeyGGDZE9Nvh0lYF7AiVbjN-l71grwfTgce6on3dsP98Uo8SJtcIogzZRfdk9X1O9vAfJpq66xAsDVHxlIG9ZgvMpxh3D6KOSCNOgGR4brffwAbZ5FxkR009YlDOlp6hJqJNOR8lPuPMFDk3s2FoUFY6cZ438y04sk9f5wd-8wSzFDaVpS4ZimU4"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-secondary bioluminescent">Tiempo Sagrado</h3>
+<p class="text-tertiary/80 text-xs tracking-widest uppercase mt-2">The Eternal Cosmic Cycle</p>
+</div>
+<!-- Right: Matemáticas (Interactive Jade Glow) -->
+<div class="lg:col-span-4 artifact-card p-8 scroll-reveal tilt-card bg-surface-container-lowest/40 backdrop-blur-xl border-secondary/20 relative">
+<div class="local-particle-container">
+<div class="spark animate-[floatSpark_7s_infinite_2s]" style="left: 80%; top: 20%"></div>
+<div class="spark animate-[floatSpark_4s_infinite_1.5s]" style="left: 10%; top: 30%"></div>
+</div>
+<h3 class="font-headline-md text-headline-md text-secondary mb-6 bioluminescent">Matemáticas</h3>
+<div class="bg-black/40 p-8 rounded-lg border border-tertiary/20 mb-6 group overflow-hidden relative">
+<div class="absolute inset-0 bg-radial-gradient(circle, rgba(150,212,173,0.05) 0%, transparent 80%) pointer-events-none"></div>
+<div class="flex justify-around items-end h-32 mb-4 relative z-10">
+<div class="text-center group-hover:-translate-y-2 transition-all">
+<div class="text-5xl text-tertiary mb-2 glyph-glow math-symbol jade-pulse-hover inline-block p-2 rounded-full">🐚</div>
+<div class="font-bold text-secondary text-lg">0</div>
+</div>
+<div class="text-center group-hover:-translate-y-3 transition-all">
+<div class="w-4 h-4 bg-tertiary rounded-full mb-3 mx-auto shadow-[0_0_15px_#96d4ad] math-symbol jade-pulse-hover"></div>
+<div class="font-bold text-secondary text-lg">1</div>
+</div>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant relative z-10">El Poder del Cero: Innovación Numérica de alcance universal.</p>
+</div>
+</div>
+</div>
+<!-- Agriculture Section -->
+<div class="artifact-card overflow-hidden scroll-reveal mb-24 tilt-card">
+<div class="grid md:grid-cols-2 gap-0">
+<div class="p-12 flex flex-col justify-center bg-surface-container-low/50">
+<span class="text-tertiary font-label-caps text-label-caps mb-4 uppercase tracking-[4px]">Sustento Divino</span>
+<h3 class="font-headline-lg text-headline-lg text-secondary mb-6 bioluminescent">Agricultura</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">Cacao and Maize: Gifts of the Gods. The Maya mastered complex irrigation and terracing.</p>
+</div>
+<div class="h-[400px] md:h-auto relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-[20s] group-hover:scale-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBChMmoedQ-e2EY28j9rVLBKJ8ig3R0IosxIxdE8s3usEU_SCixeyViiylgBtck8gbjKfYzNcYvHXHn5-1TuESUp36JU1Hi35qVR34nBVXZMnQXT9lGinA-5dh9tIl37ILsJuwEux4QxdjnHcsflyfSNhZJsnJ9DDzfLTOBLfHAiseDuvGLyEmcuibJb11m0a9_DkrTHjp2JMnD867RxbY8T2z89mTmBfhFRN7en-awRJKdtPJduMTQwFJHbC3yt6e5Pd8MEUk70W4"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background to-transparent md:block hidden opacity-80 group-hover:opacity-40"></div>
+</div>
+</div>
+</div>
+<!-- Carousel: Dioses de la Selva -->
+<div class="scroll-reveal">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h3 class="font-headline-md text-headline-md text-secondary bioluminescent">Dioses de la Selva</h3>
+<p class="text-on-surface-variant">The Eternal Pantheon</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter" id="gods-carousel">
+<!-- Kukulkán -->
+<div class="artifact-card p-0 flex flex-col md:flex-row overflow-hidden group tilt-card divine-aura relative" data-divine="kukul">
+<div class="divine-revelation-overlay"></div>
+<div class="local-particle-container"></div>
+<div class="w-full md:w-2/5 h-64 md:h-auto relative overflow-hidden">
+<img class="w-full h-full object-cover mystical-breathing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNunCNK8H4K8e_RIlmTljGPaPnwfXfroCoKq_he2bdKsbJkIYbjcuQwM7RNFpxJe1RLkgGZPbYruvlelK5dJ6aV5lHbPwn1sfTNd4XBkOQOjAcu6NzLZW6EWkv6sHlZRI3_3s8GAENQ___0-zlPQ2fzaLz3K-vQR1oHu27O3MBU5isfPfcAKsfuzXfyPHqyE16CZs5EKGCHAJowoIi_Tj8hkl1PQ7hzG7NDLnPOx6zYxgo00x3nH-2YJK994XW6y5-74bBebV_AeU"/>
+</div>
+<div class="w-full md:w-3/5 p-8 flex flex-col justify-center bg-surface-container-low/40 relative z-10">
+<h4 class="font-headline-md text-headline-md text-secondary mb-2 group-hover:translate-x-2 transition-all bioluminescent">Kukulkán</h4>
+<p class="text-on-surface-variant text-body-md line-clamp-3">Master of the wind and knowledge. The Feathered Serpent who brings wisdom to the people.</p>
+</div>
+</div>
+<!-- Ix Chel -->
+<div class="artifact-card p-0 flex flex-col md:flex-row overflow-hidden group tilt-card divine-aura relative" data-divine="ixchel">
+<div class="divine-revelation-overlay"></div>
+<div class="local-particle-container"></div>
+<div class="w-full md:w-2/5 h-64 md:h-auto relative overflow-hidden bg-[#0a110f] flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-6xl opacity-40">nights_stay</span>
+</div>
+<div class="w-full md:w-3/5 p-8 flex flex-col justify-center bg-surface-container-low/40 relative z-10">
+<h4 class="font-headline-md text-headline-md text-secondary mb-2 group-hover:translate-x-2 transition-all bioluminescent">Ix Chel</h4>
+<p class="text-on-surface-variant text-body-md line-clamp-3">Goddess of the moon, medicine, and weaving. Ruler of life cycles and fertility.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script>
+        // Magnifier Logic
+        const container = document.getElementById('magnifier-container');
+        const img = document.getElementById('glyph-image');
+        const lens = document.getElementById('lens');
+
+        container.addEventListener('mousemove', (e) => {
+            lens.style.display = 'block';
+            const rect = container.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            lens.style.left = `${x - 75}px`;
+            lens.style.top = `${y - 75}px`;
+
+            const px = (x / rect.width) * 100;
+            const py = (y / rect.height) * 100;
+
+            lens.style.backgroundImage = `url(${img.src})`;
+            lens.style.backgroundSize = `${rect.width * 2}px ${rect.height * 2}px`;
+            lens.style.backgroundPosition = `${px}% ${py}%`;
+        });
+
+        container.addEventListener('mouseleave', () => {
+            lens.style.display = 'none';
+        });
+
+        // Scroll Reveal
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+        // Navigation Toggle
+        const scrollTrigger = document.getElementById('scroll-trigger');
+        const body = document.body;
+        scrollTrigger.addEventListener('click', () => {
+            body.classList.toggle('nav-open');
+        });
+
+        // Rain System
+        const rainContainer = document.getElementById('rain-container');
+        function createRain() {
+            for(let i=0; i<100; i++) {
+                const drop = document.createElement('div');
+                drop.className = 'rain-drop';
+                drop.style.left = Math.random() * 100 + 'vw';
+                drop.style.animationDuration = Math.random() * 1 + 0.5 + 's';
+                drop.style.height = Math.random() * 20 + 10 + 'px';
+                drop.style.animationName = 'fall';
+                drop.style.animationIterationCount = 'infinite';
+                drop.style.animationDelay = Math.random() * 2 + 's';
+                rainContainer.appendChild(drop);
+            }
+        }
+        createRain();
+
+        // Parallax Effect
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            document.getElementById('parallax-layer').style.transform = `translateY(${scroll * 0.3}px)`;
+        });
+
+        // Cursor/Trail (Conceptual placeholder for jade trail)
+        const canvas = document.getElementById('jade-trail');
+        // Simple trail logic would go here
+    </script>
+</body></html>
